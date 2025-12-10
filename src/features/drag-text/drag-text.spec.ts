@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { DragTextComponent } from './drag-text';
 import { provideZonelessChangeDetection } from '@angular/core';
 import { provideHttpClient } from '@angular/common/http';
+import { provideRouter } from '@angular/router';
 
 describe('DragTextComponent', () => {
   let component: DragTextComponent;
@@ -13,7 +14,8 @@ describe('DragTextComponent', () => {
       imports: [DragTextComponent],
        providers: [provideZonelessChangeDetection(),
         provideHttpClient(),        
-        provideHttpClient()]
+        provideHttpClient(),
+      provideRouter([]) ]
     })
     .compileComponents();
 

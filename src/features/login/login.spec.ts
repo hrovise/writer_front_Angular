@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Login } from './login';
 import { provideZonelessChangeDetection } from '@angular/core';
 import { provideHttpClient } from '@angular/common/http';
+import { provideRouter } from '@angular/router';
 
 describe('Login', () => {
   let component: Login;
@@ -13,7 +14,8 @@ describe('Login', () => {
       imports: [Login],
        providers: [provideZonelessChangeDetection(),
           provideHttpClient(),        
-        provideHttpClient()
+        provideHttpClient(),
+        provideRouter([]) 
       ]
     })
     .compileComponents();

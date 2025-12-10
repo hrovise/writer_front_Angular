@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Alltexts } from './alltexts';
 import { provideZonelessChangeDetection } from '@angular/core';
 import { provideHttpClient } from '@angular/common/http';
+import { provideRouter } from '@angular/router';
 
 describe('Alltexts', () => {
   let component: Alltexts;
@@ -13,7 +14,8 @@ describe('Alltexts', () => {
       imports: [Alltexts],
        providers: [provideZonelessChangeDetection(),
         provideHttpClient(),        
-        provideHttpClient()]
+        provideHttpClient(),
+      provideRouter([]) ]
     })
     .compileComponents();
 
