@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Alltexts } from './alltexts';
+import { provideZonelessChangeDetection } from '@angular/core';
 
 describe('Alltexts', () => {
   let component: Alltexts;
@@ -8,7 +9,8 @@ describe('Alltexts', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Alltexts]
+      imports: [Alltexts],
+       providers: [provideZonelessChangeDetection()]
     })
     .compileComponents();
 

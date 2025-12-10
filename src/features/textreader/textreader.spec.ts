@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Textreader } from './textreader';
+import { provideZonelessChangeDetection } from '@angular/core';
 
 describe('Textreader', () => {
   let component: Textreader;
@@ -8,7 +9,8 @@ describe('Textreader', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Textreader]
+      imports: [Textreader],
+       providers: [provideZonelessChangeDetection()]
     })
     .compileComponents();
 

@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DragTextComponent } from './drag-text';
+import { provideZonelessChangeDetection } from '@angular/core';
 
 describe('DragTextComponent', () => {
   let component: DragTextComponent;
@@ -8,7 +9,8 @@ describe('DragTextComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DragTextComponent]
+      imports: [DragTextComponent],
+       providers: [provideZonelessChangeDetection()]
     })
     .compileComponents();
 
