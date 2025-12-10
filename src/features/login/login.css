@@ -1,0 +1,91 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #6e7dff, #b86cfa);
+  padding: 20px;
+}
+
+.login-form {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-title {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* Стили для полей ввода */
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 20px;
+  padding-left: 40px; /* Для иконки или подписи слева */
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #b86cfa;
+  outline: none;
+}
+
+.input-group input.error {
+  border-color: red;
+}
+
+.floating-label {
+  position: absolute;
+  left: 20px;
+  top: 12px;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus ~ .floating-label,
+.input-group input:not(:placeholder-shown) ~ .floating-label {
+  top: -8px;
+  font-size: 12px;
+  color: #b86cfa;
+}
+
+/* Кнопка отправки */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #b86cfa;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:disabled {
+  background: #444;
+  cursor: not-allowed;
+}
+
+.submit-btn:hover {
+  background-color: #9c50c0;
+}

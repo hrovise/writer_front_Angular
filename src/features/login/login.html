@@ -1,0 +1,34 @@
+<div class="form-container">
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit()" class="login-form">
+    <h2 class="form-title">Login</h2>
+
+    <div class="input-group">
+      <input 
+        type="email" 
+        name="email" 
+        [(ngModel)]="model.email" 
+        #email="ngModel" 
+        required 
+        placeholder="Enter your email" 
+        [ngClass]="{'error': email.invalid && email.touched}">
+      <label for="email" class="floating-label">Email</label>
+    </div>
+
+    <div class="input-group">
+      <input 
+        type="password" 
+        name="password" 
+        [(ngModel)]="model.password" 
+        #password="ngModel" 
+        required 
+        placeholder="Enter your password" 
+        [ngClass]="{'error': password.invalid && password.touched}">
+      <label for="password" class="floating-label">Password</label>
+    </div>
+
+    <button 
+      type="submit" 
+      [disabled]="loginForm.invalid" 
+      class="submit-btn">Login</button>
+  </form>
+</div>
