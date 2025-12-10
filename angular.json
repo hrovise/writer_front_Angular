@@ -36,6 +36,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": "dist/writer-front-ang",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
