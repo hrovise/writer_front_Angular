@@ -92,6 +92,7 @@
         "test": {
           "builder": "@angular/build:karma",
           "options": {
+            "browsers": "ChromeHeadless" ,
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               {
