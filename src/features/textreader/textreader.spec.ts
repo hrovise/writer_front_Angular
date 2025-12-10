@@ -17,6 +17,7 @@ let mockFileService: any;
    
     mockFileService.saveText.and.returnValue(of({})); 
     mockFileService.getChunk.and.returnValue(of({ content: 'Mock Content' }));
+     mockFileService.getText.and.returnValue(of({ title: 'Mock Title', content: 'Mock Content' }));
     await TestBed.configureTestingModule({
       imports: [Textreader],
        providers: [provideZonelessChangeDetection(),
