@@ -16,7 +16,13 @@ let mockFileService: any;
     
    
     mockFileService.saveText.and.returnValue(of({})); 
-    mockFileService.getChunk.and.returnValue(of({ content: 'Mock Content',chunks: ['Chunk 1'] }));
+    mockFileService.getChunk.and.returnValue(of({ 
+  content: 'Mock Content', 
+  totalLengthText: 100, 
+  chunks: [
+    { text: 'Final Chunk Text' } 
+  ] 
+}));
      mockFileService.getText.and.returnValue(of({ title: 'Mock Title', content: 'Mock Content' }));
     await TestBed.configureTestingModule({
       imports: [Textreader],
