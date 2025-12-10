@@ -21,7 +21,7 @@ describe('Alltexts', () => {
     await TestBed.configureTestingModule({
       imports: [Alltexts],
        providers: [provideZonelessChangeDetection(),
-        provideHttpClient(),        
+             
         provideHttpClient(),
       provideRouter([]),
     { provide: FileService, useValue: mockFileService },]
