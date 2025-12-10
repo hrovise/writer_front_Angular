@@ -4,18 +4,21 @@ import { Alltexts } from './alltexts';
 import { provideZonelessChangeDetection } from '@angular/core';
 import { provideHttpClient } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
+import { FileService } from '../../core/file-service/file-service';
 
 describe('Alltexts', () => {
   let component: Alltexts;
   let fixture: ComponentFixture<Alltexts>;
-
+    let mockFileService: any;
+  
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [Alltexts],
        providers: [provideZonelessChangeDetection(),
         provideHttpClient(),        
         provideHttpClient(),
-      provideRouter([]) ]
+      provideRouter([]),
+    { provide: FileService, useValue: mockFileService },]
     })
     .compileComponents();
 

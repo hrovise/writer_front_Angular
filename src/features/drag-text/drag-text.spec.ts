@@ -20,7 +20,7 @@ describe('DragTextComponent', () => {
       providers: [
         provideZonelessChangeDetection(),
         
-       
+        
   { provide: FileService, useValue: mockFileService }, 
   provideRouter([])
         
