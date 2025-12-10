@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DragText } from './drag-text';
+import { DragTextComponent } from './drag-text';
 
-describe('DragText', () => {
-  let component: DragText;
-  let fixture: ComponentFixture<DragText>;
+describe('DragTextComponent', () => {
+  let component: DragTextComponent;
+  let fixture: ComponentFixture<DragTextComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DragText]
+      imports: [DragTextComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DragText);
+    fixture = TestBed.createComponent(DragTextComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
