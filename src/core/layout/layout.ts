@@ -14,8 +14,8 @@ export class Layout {
   // computed сигнал для количества строк на страницу
   charsPerPage = computed(() => {
     const power = this.width() * this.height();
-    const koef = this.width() / this.defaultWidth;
-    console.log('koef', koef);
+    //const koef = this.width() / this.defaultWidth;
+   
     return power / this.fontKoef() / this.depenedsonFont();
   });
 

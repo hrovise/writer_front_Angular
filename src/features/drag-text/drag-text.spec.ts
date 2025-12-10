@@ -13,18 +13,16 @@ describe('DragTextComponent', () => {
  let mockFileService: any;
  
   beforeEach(async () => {
-      mockFileService = jasmine.createSpyObj('FileService', ['getChunk', 'getAllTexts']);
-
-   
-    mockFileService.getChunk.and.returnValue(of({ content: 'Fake Text' })); 
-    mockFileService.getAllTexts.and.returnValue(of([]));
+ 
 
     await TestBed.configureTestingModule({
       imports: [DragTextComponent],
       providers: [
         provideZonelessChangeDetection(),
         
-        { provide: FileService, useValue: mockFileService },
+       
+  { provide: FileService, useValue: mockFileService }, 
+  provideRouter([])
         
     
       ]
