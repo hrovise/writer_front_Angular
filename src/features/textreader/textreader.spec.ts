@@ -12,7 +12,7 @@ describe('Textreader', () => {
   let fixture: ComponentFixture<Textreader>;
 let mockFileService: any;
   beforeEach(async () => {
-     mockFileService = jasmine.createSpyObj('FileService', ['saveText', 'getChunk']);
+     mockFileService = jasmine.createSpyObj('FileService', ['saveText', 'getChunk', 'getText']);
     
    
     mockFileService.saveText.and.returnValue(of({})); 
