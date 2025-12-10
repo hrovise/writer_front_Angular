@@ -1,4 +1,4 @@
 export const environment = {
   
-  URL:"https://writerbackendnestjs-production.up.railway.app"
+  API_URL:"https://writerbackendnestjs-production.up.railway.app"
 };

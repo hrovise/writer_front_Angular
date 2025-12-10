@@ -19,7 +19,7 @@ export class Authservice {
       email:email,
       password:password
     }
-     this.http.post<{access_token:string}>(`${environment.URL}/api/user/login`, body).subscribe(res=>{
+     this.http.post<{access_token:string}>(`${environment.API_URL}/api/user/login`, body).subscribe(res=>{
 
        localStorage.setItem(this.token, res.access_token);
        this.isAuthenticated.set(true); 

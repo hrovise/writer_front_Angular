@@ -24,7 +24,7 @@ export class FileService {
 
     console.log('form',formData)
     
-    this.http.post(`${environment.URL}/api/text/createNew`, formData).subscribe({
+    this.http.post(`${environment.API_URL}/api/text/createNew`, formData).subscribe({
       next:response=>{this.router.navigate(['/'])},
       error:error=>{console.log('error:', error)},
       complete:()=>{console.log('succeed')}
@@ -38,7 +38,7 @@ updateText(data: Pick<TextDTO,'imageFile'>, ids:string|null|undefined): void {
 
     console.log('form',formData, id)
     
-    this.http.post(`${environment.URL}/api/text/update/${id}`, formData).subscribe({
+    this.http.post(`${environment.API_URL}/api/text/update/${id}`, formData).subscribe({
       next:response=>{this.router.navigate(['/'])},
       error:error=>{console.log('error:', error)},
       complete:()=>{console.log('succeed')}
@@ -46,9 +46,9 @@ updateText(data: Pick<TextDTO,'imageFile'>, ids:string|null|undefined): void {
   }
   getText(query:string){
     console.log('querSERV',query)
-    return this.http.get<ITextResponse>(`${environment.URL}/api/text/chunk${query}`,)
+    return this.http.get<ITextResponse>(`${environment.API_URL}/api/text/chunk${query}`,)
   }
     getAllTexts() {
-   return  this.http.get<any>(` ${environment.URL}/api/text/titles`);
+   return  this.http.get<any>(` ${environment.API_URL}/api/text/titles`);
   }
 }
