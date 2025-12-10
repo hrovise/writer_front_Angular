@@ -16,14 +16,18 @@ let mockFileService: any;
     
    
     mockFileService.saveText.and.returnValue(of({})); 
-    mockFileService.getChunk.and.returnValue(of({ 
-  content: 'Mock Content', 
+ mockFileService.getChunk.and.returnValue(of({ content: 'Mock Content' }));
+
+
+mockFileService.getText.and.returnValue(of({ 
+  title: 'Mock Title', 
+  content: 'Mock Content',
+  chunksCount: 1,      
   totalLengthText: 100, 
-  chunks: [
-    { text: 'Final Chunk Text' } 
-  ] 
+  chunks: [            
+    { text: 'First Chunk' } 
+  ]
 }));
-     mockFileService.getText.and.returnValue(of({ title: 'Mock Title', content: 'Mock Content' }));
     await TestBed.configureTestingModule({
       imports: [Textreader],
        providers: [provideZonelessChangeDetection(),
